@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appetize.io Demo</title>
+    <style>
+        #appetize-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="appetize-frame"></iframe>
+
+    <script>
+        const apiToken = 'tok_v74sizz44bwbtom2ygiws2wnwe';
+        const appUrl = 'https://www.google.com';
+
+        const appetizeUrl = `https://appetize.io/embed/${apiToken}?device=iphone11&scale=100&autoplay=false&orientation=portrait&deviceColor=black&screenOnly=true&xdocMsg=true&launchUrl=${encodeURIComponent(appUrl)}`;
+
+        const frame = document.getElementById('appetize-frame');
+        frame.src = appetizeUrl;
+    </script>
+</body>
+</html>
